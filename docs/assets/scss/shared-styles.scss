@@ -1,0 +1,63 @@
+//IMPORTACIONES
+
+// @import './maps/maps';
+@import './media-queries/media-Queries';
+@import './header/header';
+@import './footer/footer';
+
+
+//ESTILOS COMPARTIDOS ENTRE TODAS LAS PÁGINAS
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  font-family: 'Jost', sans-serif;
+  position: relative;
+  background: rgb(1,1,1);
+  background: linear-gradient(177deg, rgba(1,1,1,1) 0%, rgba(64,64,64,1) 35%, rgba(153,152,152,1) 60%, rgba(213,213,213,1) 84%, rgba(255,255,255,1) 100%);
+}
+
+.container {
+  width: 100%;
+  min-width: 280px;
+  margin: 0 auto;
+
+  @include responsive(phone) {
+    max-width: 576px;
+  }
+
+  @include responsive(smartPhone) {
+    max-width: 768px;
+  }
+
+  @include responsive(tablet) {
+    max-width: 992px;
+    // box-shadow: 10px 0px 8px rgb(0, 0, 0);
+  }
+
+  @include responsive(notebook) {
+    max-width: 1024px;
+  }
+
+  @include responsive(desktop) {
+    max-width: 1400px;
+  }
+}
+
+
+
+
+
+
+
+
+

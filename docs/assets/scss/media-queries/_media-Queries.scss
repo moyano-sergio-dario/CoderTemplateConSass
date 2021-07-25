@@ -1,0 +1,27 @@
+@mixin responsive ($dispositivo){
+  @if $dispositivo == phone{
+    @media screen and (min-width: 576px){
+      @content;
+    }
+  }
+  @else if $dispositivo == smartPhone{
+    @media screen and (min-width: 768px){
+      @content;
+    }
+  }
+  @else if $dispositivo == tablet{
+    @media screen and (min-width: 992px){
+      @content;
+    }
+  }
+  @else if $dispositivo == notebook{
+    @media screen and (min-width: 1024px){
+      @content;
+    }
+  }
+  @else if $dispositivo == desktop{
+    @media screen and (min-width: 1200px){
+      @content;
+    }
+  }
+}

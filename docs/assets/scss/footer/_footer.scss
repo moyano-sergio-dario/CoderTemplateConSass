@@ -1,0 +1,168 @@
+//IMPORTACIONES
+
+@import '../variables/variables';
+@import '../mixins/mixins';
+@import '../media-queries/media-Queries';
+
+//FOOTER
+
+.footer {
+  background-image: url(../img/img-footer/footer-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    padding: 10px;
+
+    @include responsive(desktop) {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+  }
+
+  &__contact {
+    border-bottom: 1px solid $color-black;
+    padding: 30px 0;
+
+    &__link {
+      display: block;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 25px;
+      font-weight: 300;
+      color: $color-orangered;
+
+      @include responsive(smartPhone) {
+        font-size: 40px;
+        font-weight: lighter;
+      }
+
+      @include responsive(tablet) {
+        font-size: 60px;
+      }
+    }
+
+    &__text {
+      @include responsive(smartPhone) {
+        font-size: 18px;
+      }
+    }
+
+    @include responsive(smartPhone) {
+      padding: 60px 0;
+    }
+    @include responsive(desktop) {
+      padding: 80px 0;
+    }
+  }
+
+  &__contain {
+    padding-top: 20px;
+
+    @include responsive(phone) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @include responsive(smartPhone) {
+      grid-template-columns: repeat(3, 1fr);
+      padding-top: 60px;
+    }
+  }
+
+  &__office {
+    grid-column: 1 / 2;
+  }
+
+  &__help {
+    grid-column: 1 / 2;
+
+    @include responsive(smartPhone) {
+      grid-column: 2 / 3;
+    }
+  }
+
+  &__quickLinks {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    @include responsive(smartPhone) {
+      grid-column: 3 / 4;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 10px 0 15px;
+
+    @include responsive(tablet) {
+      font-size: 30px
+    }
+
+    @include responsive(desktop) {
+      font-size: 32px
+    }
+  }
+
+  &__list {
+    @include reset-list;
+
+    &__item {
+      margin-bottom: 8px;
+
+      @include responsive(desktop) {
+        font-size: 18px;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $color-black;
+      transition: all 500ms ease-in;
+
+      &:hover {
+        color: $color-orangered;
+      }
+    }
+  }
+
+  &__legal {
+    margin-top: 20px;
+
+    &__span {
+      display: block;
+      font-size: 12px;
+
+      @include responsive(tablet) {
+        font-size: 14px;
+      }
+    }
+
+    @include responsive(phone) {
+      grid-column: 1 / -1;
+    }
+
+    @include responsive(smartPhone) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @include responsive(tablet) {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+  }
+}
+
+
+
+
+
+
+
+

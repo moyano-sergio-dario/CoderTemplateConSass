@@ -1,0 +1,202 @@
+.contacto {
+  background-color: #ffF;
+  box-shadow: 0px 10px 8px #474747;
+  width: 100%;
+  position: relative;
+  z-index: 20;
+}
+.contacto__wrapper {
+  padding: 40px 15px 50px;
+  min-width: 280px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 992px) {
+  .contacto__wrapper {
+    max-width: 992px;
+    padding: 20px 15px 160px;
+  }
+}
+.contacto__title {
+  text-align: center;
+  margin: 0 0 40px;
+}
+@media screen and (min-width: 768px) {
+  .contacto__title {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contacto__title {
+    font-size: 42px;
+  }
+}
+.contacto__text {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #383535;
+}
+@media screen and (min-width: 768px) {
+  .contacto__text {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contacto__text {
+    font-size: 18px;
+  }
+}
+.contacto__form {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 576px) {
+  .contacto__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .contacto__form__grupoNombre {
+    grid-column: 1/2;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacto__form {
+    padding: 0 50px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contacto__form {
+    padding: 0 100px;
+  }
+}
+.contacto__form__grupoApellido {
+  grid-column: 2/3;
+}
+.contacto__form__grupoCorreo {
+  grid-column: 1/-1;
+  width: 100%;
+}
+.contacto__form__grupoTelefono {
+  grid-column: 1/2;
+}
+.contacto__form__grupoEmpresa {
+  grid-column: 2/3;
+}
+.contacto__form__grupoProvincias {
+  width: 100%;
+  grid-column: 1/-1;
+  justify-self: center;
+}
+.contacto__form__label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.contacto__form__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  outline: none;
+}
+.contacto__form__input:focus {
+  border: 3px solid #0a0a0a;
+}
+.contacto__form__provincias {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contacto__form__texto {
+  width: 100%;
+  margin: 25px 0;
+}
+@media screen and (min-width: 576px) {
+  .contacto__form__texto {
+    grid-column: 1/-1;
+  }
+}
+.contacto__form__textarea {
+  width: 100%;
+  margin: 0 0 20px;
+}
+.contacto__form__newsletter {
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 576px) {
+  .contacto__form__newsletter {
+    grid-column: 1/-1;
+    font-size: 18px;
+  }
+}
+.contacto__form__newsletter__texto {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+@media screen and (min-width: 576px) {
+  .contacto__form__newsletter__texto {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+.contacto__form__newsletter__block {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 576px) {
+  .contacto__form__newsletter__block {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.contacto__form__newsletter__radio {
+  margin-right: 10px;
+}
+.contacto__form__newsletter__span {
+  display: block;
+}
+.contacto__form__botones__contenedor {
+  width: 100%;
+  height: 100%;
+  margin: 20px 0;
+}
+@media screen and (min-width: 576px) {
+  .contacto__form__botones__contenedor {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+.contacto__form__botones {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: #131413;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.contacto__form__botones:hover {
+  transform: translate(-5px, -5px);
+  background-color: #353535;
+}
+@media screen and (min-width: 576px) {
+  .contacto__form__botones {
+    width: 100%;
+    box-shadow: 10px 10px 5px #000;
+    transition: all 300ms ease-in;
+  }
+}
+
+/*# sourceMappingURL=main-contacto.css.map */

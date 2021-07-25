@@ -1,0 +1,177 @@
+//IMPORTACIONES
+@import '../variables/variables';
+@import '../mixins/mixins';
+@import '../media-queries/media-Queries';
+
+
+.main {
+  background-color: $color-white;
+  padding: 0 15px;
+  position: relative;
+  z-index: 20;
+  box-shadow: 0px 10px 8px #474747;
+
+  //TITULO Y SUB-TITULO
+
+  &__group {
+    padding: 30px 0 0;
+
+    &__title {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 20px;
+
+      @include responsive(phone) {
+        font-size: 30px;
+      }
+
+      @include responsive(smartPhone) {
+        font-size: 36px;
+        line-height: 1.1;
+      }
+
+      @include responsive(desktop) {
+        font-size: 54px;
+        margin-bottom: 40px;
+      }
+    }
+
+    &__subTitle {
+      font-size: 12px;
+      color: gray;
+
+      @include responsive(phone) {
+        font-size: 16px;
+      }
+
+      @include responsive(smartPhone) {
+        font-size: 18px;
+      }
+
+      @include responsive(desktop) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  //MENÚ INTERMEDIO
+
+  &__menu {
+    padding: 20px 0;
+
+    &__list {
+      @include reset-list();
+
+      @include responsive(smartPhone) {
+        padding: 20px 0;
+      }
+    }
+
+    &__item {
+      display: inline-block;
+      font-weight: bold;
+      margin-right: 20px;
+      font-size: 12px;
+      transition: all 300ms ease-in;
+
+      @include responsive(phone) {
+        font-size: 14px;
+      }
+
+      @include responsive(smartPhone) {
+        font-size: 16px;
+      }
+
+      &:hover {
+        color: $color-orangered;
+        cursor: pointer;
+      }
+    }
+  }
+
+  //SECCIÓN DE IMAÉGENES
+
+  &__section {
+
+    @include responsive(smartPhone) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    @include responsive(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include responsive(desktop) {
+      grid-template-columns: repeat(3, 1.5fr);
+    }
+  }
+
+  &__product {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+  }
+
+  &__figure {
+    overflow: hidden;
+  }
+  
+  &__img {
+    @include imagenes();
+    transition: all 500ms ease-in;
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+  
+  &__description {
+
+    &__title {
+      color: $color-red;
+      margin-top: 10px;
+      font-weight: 300;
+    }
+
+    &__name {
+      font-size: 22px;
+      font-weight: 400;
+      margin-top: 15px;
+
+      @include responsive(desktop) {
+        font-size: 30px;
+      }
+    }
+
+    &__paragraph {
+      margin: 20px 0;
+    }
+
+  }
+
+  &__button {
+    grid-column: 1 / -1;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    
+    
+    &__link {
+      @include circle-buttons(120px, 120px);
+      display: block;
+      text-align: center;
+      line-height: 120px;
+      text-decoration: none;
+      color: $color-black;
+      transition: all 500ms ease-in;
+      
+      &:hover {
+        border-color: $color-orangered;
+        color: $color-orangered;
+      }
+    }
+  }
+}

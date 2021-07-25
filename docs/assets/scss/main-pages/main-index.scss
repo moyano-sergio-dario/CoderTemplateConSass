@@ -1,0 +1,78 @@
+//IMPORTACIONES
+
+@import '../variables/variables';
+@import '../media-queries/media-Queries';
+
+//ESTILOS DEL CUERPO DE LA PAGINA INDEX.HTML
+
+.main {
+  position: relative;
+  z-index: 20;
+  box-shadow: 0px 10px 8px #474747;
+
+  &__figure {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    padding: 20px 10px;
+    position: absolute;
+    top: 0;
+    background: rgba($color-black,  .7);
+
+    &__title {
+      font-size: 24px;
+      color: $color-white;
+
+      @include responsive(phone) {
+        font-size: 30px;
+      }
+
+      @include responsive(smartPhone) {
+        font-size: 36px;
+      }
+
+      @include responsive(desktop) {
+        font-size: 54px;
+      }
+    }
+  
+    &__paragraph {
+      font-size: 14px;
+      color: $color-white;
+
+      @include responsive(phone) {
+        font-size: 18px;
+      }
+
+      @include responsive(smartPhone) {
+        font-size: 22px;
+      }
+
+      @include responsive(desktop) {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

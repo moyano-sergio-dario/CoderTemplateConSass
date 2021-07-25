@@ -1,0 +1,228 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+@import '../maps/maps';
+
+//ESTILOS DEL HEADER
+
+.header {
+  background-color: $color-white;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  box-shadow: 0px 3px 4px #474747;
+ 
+  &__wrapper {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive(tablet) {
+      padding: 20px;
+    }
+  }
+
+  &__contain {
+    display: flex;
+    align-items: center;
+
+    &__link {
+      display: block;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    &__logo {
+      font-size: 30px;
+      color: $color-black;
+      transition: all 500ms ease-in;
+
+      &:hover {
+        color: $color-gray;
+      }
+
+      @include responsive(phone) {
+        font-size: 40px;
+      }
+
+      @include responsive(tablet) {
+        font-size: 50px;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include responsive(tablet) {
+      display: block;
+    }
+  }
+
+  &__list {
+    @include reset-list;
+    &__item {
+      display: inline-block;
+      padding: 10px 20px;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $color-black;
+      transition: all 500ms ease-in;
+
+      &:hover {
+        color: $color-orangered;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social {
+
+    &__btn {
+      @include circle-buttons(35px, 35px);
+      transition: all 500ms ease-in;
+
+      @each $redes, $colores in $redesSociales {
+        &--#{$redes}:hover {
+          background: $colores;
+          color: $color-white;
+        }
+    }
+
+    @include responsive(desktop) {
+      margin-left: 15px;
+    }
+  }
+}
+
+  &__hamburguer {
+
+    @include responsive(tablet) {
+      display: none;
+    }
+    &__btn {
+      @include circle-buttons(40px, 40px);
+      border: 0;
+      background: none;
+      margin-left: 10px;
+      line-height: 0;
+
+      @include responsive(smartPhone) {
+        margin-left: 50px;
+      }
+    }
+      
+      &__bars {
+        font-size: 30px;
+      }
+    }
+}
+
+/*--------- ESTILOS DEL MENÚ RESPONSIVE ---------------*/
+
+.responsive__menu {
+  position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    width: 100%;
+    height: 100vh;
+    background-color: #131212;
+}
+
+.nav__responsive {
+  height: 100%;
+
+  &__list {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__close {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    background-color: rgb(19, 18, 18);
+    color: #fff;
+    &:hover {
+      color: #ff0000;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+
+    &__close {
+      margin-right: 50px;
+      padding: 0;
+      width: auto;
+      align-self: flex-end;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    padding: 12px;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+      border-color: 1px solid #000;
+    }
+  }
+}
+
+
+/*----------------- CLASES EXTRA JAVASCRIPT-----------*/
+
+.cambia__color {
+  background-color: #161515;
+  color: #fff;
+}
+
+.border__bottom--red {
+  border-bottom: 4px solid #ff1e00;
+}
+
+.ocultar__menu {
+  transform: translateX(-150%);
+}
+
+.transition__menu {
+  transition: all 1s ease-in-out;
+  
+}
+
+
+
+
+
+
+
+
+
