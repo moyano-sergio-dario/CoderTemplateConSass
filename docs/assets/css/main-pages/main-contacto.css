@@ -15,7 +15,7 @@
 @media screen and (min-width: 992px) {
   .contacto__wrapper {
     max-width: 992px;
-    padding: 20px 15px 160px;
+    padding: 60px 15px 160px;
   }
 }
 .contacto__title {
@@ -126,6 +126,7 @@
 .contacto__form__textarea {
   width: 100%;
   margin: 0 0 20px;
+  resize: none;
 }
 .contacto__form__newsletter {
   padding-bottom: 20px;
@@ -187,9 +188,11 @@
   border: none;
   cursor: pointer;
 }
-.contacto__form__botones:hover {
-  transform: translate(-5px, -5px);
-  background-color: #353535;
+@media screen and (min-width: 992px) {
+  .contacto__form__botones:hover {
+    transform: translate(-5px, -5px);
+    background-color: #353535;
+  }
 }
 @media screen and (min-width: 576px) {
   .contacto__form__botones {

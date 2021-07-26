@@ -18,7 +18,7 @@
 
     @include responsive(tablet) {
       max-width: 992px;
-      padding: 20px 15px 160px;
+      padding: 60px 15px 160px;
     }
   }
 
@@ -135,6 +135,7 @@
     &__textarea {
       width: 100%;
       margin: 0 0 20px;
+      resize: none;
     }
 
     &__newsletter {
@@ -199,9 +200,12 @@
       border: none;
       cursor: pointer;
 
-      &:hover {
-        transform: translate(-5px ,-5px);
-        background-color: #353535;
+      @include responsive(tablet) {
+
+        &:hover {
+          transform: translate(-5px ,-5px);
+          background-color: #353535;
+        }
       }
 
       @include responsive(phone) {
