@@ -171,8 +171,13 @@
       &__title {
         margin: 0 0 20px;
 
-        @include responsive(desktop) {
+        @include responsive(smartPhone) {
           font-size: 18px;
+        }
+
+        @include responsive(desktop) {
+          font-size: 22px;
+          font-weight: 500;
         }
       }
 
