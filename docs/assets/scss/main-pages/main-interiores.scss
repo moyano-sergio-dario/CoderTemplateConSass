@@ -237,7 +237,6 @@
     }
 
     &__statistics {
-      padding-top: 50px;
       text-align: center;
 
       @include responsive(phone) {
@@ -297,7 +296,7 @@
 
   &__third {
     text-align: center;
-    padding-bottom: 60px;
+    padding: 20px 0 60px;
     &__solution {
 
       &__title {
