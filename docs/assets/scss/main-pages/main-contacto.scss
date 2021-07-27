@@ -55,24 +55,10 @@
     display: flex;
     flex-direction: column;
 
-    @include responsive(phone) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-    }
-
     &__grupoNombre {
       @include responsive(phone) {
         grid-column: 1/2;
       }
-    }
-
-    @include responsive(smartPhone) {
-      padding: 0 50px;
-    }
-
-    @include responsive(tablet) {
-      padding: 0 100px;   
     }
 
     &__grupoApellido {
@@ -141,11 +127,6 @@
     &__newsletter {
       padding-bottom: 20px;
 
-      @include responsive(phone) {
-        grid-column: 1/-1;
-        font-size: 18px;
-      }
-
       &__texto {
         display: block;
         text-align: center;
@@ -174,6 +155,11 @@
 
       &__span {
         display: block;
+      }
+
+      @include responsive(phone) {
+        grid-column: 1/-1;
+        font-size: 18px;
       }
     }
 
@@ -213,6 +199,20 @@
         box-shadow: 10px 10px 5px #000;
         transition: all 300ms ease-in;
       }
+    }
+
+    @include responsive(phone) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @include responsive(smartPhone) {
+      padding: 0 50px;
+    }
+
+    @include responsive(tablet) {
+      padding: 0 100px;   
     }
   }
 }

@@ -9,18 +9,6 @@
 .main__wrapper {
   padding: 0 10px;
 }
-@media screen and (min-width: 768px) {
-  .main__first {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .main__first {
-    padding: 0 0 30px;
-  }
-}
 .main__first__figure {
   width: 100%;
   margin: 0;
@@ -72,6 +60,7 @@
 @media screen and (min-width: 1200px) {
   .main__first__text__paragraph {
     font-size: 18px;
+    margin: 50px 0;
   }
 }
 .main__first__button {
@@ -79,11 +68,6 @@
   align-items: center;
   border-bottom: 1px solid #000;
   padding: 0 0 40px;
-}
-@media screen and (min-width: 1200px) {
-  .main__first__button {
-    padding-bottom: 60px;
-  }
 }
 .main__first__button__play {
   display: block;
@@ -95,8 +79,8 @@
   color: orangered;
 }
 @media screen and (min-width: 1200px) {
-  .main__first__phone {
-    padding-top: 40px;
+  .main__first__button {
+    padding-bottom: 60px;
   }
 }
 .main__first__phone__paragraph {
@@ -137,18 +121,27 @@
     font-size: 22px;
   }
 }
-.main__second {
-  padding-top: 20px;
+@media screen and (min-width: 1200px) {
+  .main__first__phone {
+    padding-top: 40px;
+  }
 }
 @media screen and (min-width: 768px) {
-  .main__second {
+  .main__first {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    justify-items: center;
-    align-items: center;
-    padding-top: 40px;
+    padding: 0 0 30px;
   }
+}
+@media screen and (min-width: 1200px) {
+  .main__first {
+    padding: 30px 0;
+    align-items: center;
+  }
+}
+.main__second {
+  padding-top: 20px;
 }
 .main__second__figure {
   margin: 0;
@@ -222,22 +215,6 @@
   text-align: center;
 }
 @media screen and (min-width: 576px) {
-  .main__second__statistics {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 768px) {
-  .main__second__statistics {
-    grid-column: 1/-1;
-  }
-}
-@media screen and (min-width: 992px) {
-  .main__second__statistics {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (min-width: 576px) {
   .main__second__statistics__clients, .main__second__statistics__employed, .main__second__statistics__projects {
     display: flex;
     align-items: center;
@@ -265,6 +242,32 @@
   .main__second__statistics__clients__satisfaction__text {
     display: block;
     margin-left: 10px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .main__second__statistics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 768px) {
+  .main__second__statistics {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main__second__statistics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 768px) {
+  .main__second {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    padding-top: 40px;
   }
 }
 .main__third {
@@ -342,27 +345,8 @@
 .main__four {
   padding: 0 0 60px;
 }
-@media screen and (min-width: 768px) {
-  .main__four {
-    padding-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .main__four {
-    padding-top: 40px;
-  }
-}
 .main__four__position {
   position: relative;
-}
-@media screen and (min-width: 768px) {
-  .main__four__position {
-    grid-column: 2/3;
-  }
 }
 .main__four__position__figure {
   width: 100%;
@@ -376,7 +360,7 @@
 .main__four__position__text {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   position: absolute;
   height: 100%;
@@ -429,10 +413,14 @@
     font-size: 22px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .main__four__position__text {
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 768px) {
-  .main__four__all {
-    grid-column: 1/2;
-    grid-row: 1/2;
+  .main__four__position {
+    grid-column: 2/3;
   }
 }
 .main__four__all__content__comillas:before {
@@ -474,6 +462,26 @@
 @media screen and (min-width: 992px) {
   .main__four__all__author__direction {
     font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main__four__all {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main__four {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main__four {
+    padding-top: 40px;
   }
 }
 .main__five {

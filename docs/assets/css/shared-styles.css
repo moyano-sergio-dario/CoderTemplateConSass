@@ -90,14 +90,17 @@
 .header__social__btn--twitter:hover {
   background: #1dcaff;
   color: #fff;
+  cursor: pointer;
 }
 .header__social__btn--facebook:hover {
   background: #2c5dff;
   color: #fff;
+  cursor: pointer;
 }
 .header__social__btn--instagram:hover {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   color: #fff;
+  cursor: pointer;
 }
 @media screen and (min-width: 1200px) {
   .header__social__btn {

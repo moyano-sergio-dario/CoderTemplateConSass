@@ -17,15 +17,6 @@
   }
 
   &__first {
-    @include responsive(smartPhone) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-    }
-
-    @include responsive(smartPhone) {
-      padding: 0 0 30px;
-    }
 
     &__figure {
       width: 100%;
@@ -77,6 +68,7 @@
 
         @include responsive(desktop) {
           font-size: 18px;
+          margin: 50px 0;
         }
       }
     }
@@ -86,10 +78,6 @@
       align-items: center;
       border-bottom: 1px solid #000;
       padding: 0 0 40px;
-
-      @include responsive(desktop) {
-        padding-bottom:60px;
-      }
 
       &__play {
         display: block;
@@ -101,13 +89,14 @@
           color: orangered;
         }
       }
+
+      @include responsive(desktop) {
+        padding-bottom:60px;
+      }
     }
 
     &__phone {
-      @include responsive(desktop) {
-        padding-top:40px;
-      }
-
+     
       &__paragraph {
         line-height: 1.7;
         margin: 24px 0;
@@ -147,6 +136,22 @@
           }
         }
       }
+
+      @include responsive(desktop) {
+        padding-top:40px;
+      }
+    }
+
+    @include responsive(smartPhone) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 0 0 30px;
+    }
+
+    @include responsive(desktop) {
+      padding: 30px 0;
+      align-items: center;
     }
   }
 
@@ -154,15 +159,6 @@
 
   &__second {
     padding-top: 20px;
-
-    @include responsive(smartPhone) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      justify-items: center;
-      align-items: center;
-      padding-top: 40px;
-    }
 
     &__figure {
       margin: 0;
@@ -180,6 +176,7 @@
     }
 
     &__separator {
+
       @include responsive(smartPhone) {
         grid-column: 2 / 3;
         display: flex;
@@ -240,19 +237,6 @@
     &__statistics {
       text-align: center;
 
-      @include responsive(phone) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @include responsive(smartPhone) {
-        grid-column: 1 / -1;
-      }
-
-      @include responsive(tablet) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
       &__clients {
 
         @include responsive(phone) {
@@ -286,10 +270,33 @@
           }
         }
       }
+
       &__employed, &__projects {
         @extend .main__second__statistics__clients;
         
       }
+
+      @include responsive(phone) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include responsive(smartPhone) {
+        grid-column: 1 / -1;
+      }
+
+      @include responsive(tablet) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @include responsive(smartPhone) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      justify-items: center;
+      align-items: center;
+      padding-top: 40px;
     }
   }
 
@@ -366,8 +373,8 @@
             font-weight: 500;
 
             @include responsive(desktop) {
-          font-size: 18px;
-        }
+              font-size: 18px;
+            }
           }
         }
       }
@@ -378,24 +385,9 @@
   &__four {
     padding: 0 0 60px;
 
-    @include responsive(smartPhone) {
-      padding-top: 20px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      align-items: center;
-    }
-
-    @include responsive(desktop) {
-      padding-top: 40px;
-    }
-
     &__position {
       position: relative;
 
-      @include responsive(smartPhone) {
-        grid-column: 2 / 3;
-      }
       &__figure {
         width: 100%;
         margin: 0;
@@ -410,11 +402,12 @@
       &__text {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         position: absolute;
         height: 100%;
         top: 0;
+
         &__title {
           margin: 20px 0 10px;
           font-size: 18px;
@@ -458,15 +451,19 @@
             font-size: 22px;
           }
         }
+
+        @include responsive(desktop) {
+          justify-content: center;
+        }
+      }
+
+      @include responsive(smartPhone) {
+        grid-column: 2 / 3;
       }
     }
 
     &__all {
-      @include responsive(smartPhone) {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-      }
-
+      
       &__content {
 
         &__comillas:before {
@@ -513,6 +510,23 @@
           }
         }
       }
+
+      @include responsive(smartPhone) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+    }
+
+    @include responsive(smartPhone) {
+      padding-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      align-items: center;
+    }
+
+    @include responsive(desktop) {
+      padding-top: 40px;
     }
   }
 

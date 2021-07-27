@@ -54,25 +54,8 @@
   flex-direction: column;
 }
 @media screen and (min-width: 576px) {
-  .contacto__form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-}
-@media screen and (min-width: 576px) {
   .contacto__form__grupoNombre {
     grid-column: 1/2;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contacto__form {
-    padding: 0 50px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .contacto__form {
-    padding: 0 100px;
   }
 }
 .contacto__form__grupoApellido {
@@ -131,12 +114,6 @@
 .contacto__form__newsletter {
   padding-bottom: 20px;
 }
-@media screen and (min-width: 576px) {
-  .contacto__form__newsletter {
-    grid-column: 1/-1;
-    font-size: 18px;
-  }
-}
 .contacto__form__newsletter__texto {
   display: block;
   text-align: center;
@@ -164,6 +141,12 @@
 }
 .contacto__form__newsletter__span {
   display: block;
+}
+@media screen and (min-width: 576px) {
+  .contacto__form__newsletter {
+    grid-column: 1/-1;
+    font-size: 18px;
+  }
 }
 .contacto__form__botones__contenedor {
   width: 100%;
@@ -199,6 +182,23 @@
     width: 100%;
     box-shadow: 10px 10px 5px #000;
     transition: all 300ms ease-in;
+  }
+}
+@media screen and (min-width: 576px) {
+  .contacto__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacto__form {
+    padding: 0 50px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contacto__form {
+    padding: 0 100px;
   }
 }
 
