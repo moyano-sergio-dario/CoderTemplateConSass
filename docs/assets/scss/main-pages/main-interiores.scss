@@ -153,7 +153,7 @@
   //SEGUNDA SECCIÓN
 
   &__second {
-    padding-top: 40px;
+    padding-top: 20px;
 
     @include responsive(smartPhone) {
       display: grid;
@@ -161,6 +161,7 @@
       gap: 30px;
       justify-items: center;
       align-items: center;
+      padding-top: 40px;
     }
 
     &__figure {
@@ -296,7 +297,7 @@
 
   &__third {
     text-align: center;
-    padding: 20px 0 60px;
+    padding: 40px 0 60px;
     &__solution {
 
       &__title {
@@ -378,11 +379,15 @@
     padding: 0 0 60px;
 
     @include responsive(smartPhone) {
-      padding-top: 60px;
+      padding-top: 20px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 30px;
       align-items: center;
+    }
+
+    @include responsive(desktop) {
+      padding-top: 40px;
     }
 
     &__position {
