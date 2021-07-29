@@ -73,8 +73,13 @@
   color: orangered;
 }
 .header__box {
-  display: flex;
-  align-items: center;
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .header__box {
+    display: flex;
+    align-items: center;
+  }
 }
 .header__social__btn {
   width: 35px;
@@ -163,6 +168,7 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
+  padding-top: 7px;
   font-size: 25px;
   font-weight: bolder;
   border: none;
@@ -183,6 +189,9 @@
   padding: 0;
   width: auto;
   align-self: flex-end;
+}
+.nav__responsive__item--redes {
+  margin-bottom: 10px;
 }
 .nav__responsive__link {
   display: block;
