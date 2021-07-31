@@ -5,8 +5,8 @@
 
 
 .main__news {
-  background-color: #fff;
-  box-shadow: 0px 10px 8px #474747;
+  background-color: $color-white;
+  box-shadow: 0px 10px 8px $color-shadow;
   min-width: 280px;
   margin: 0 auto;
   position: relative;
@@ -88,7 +88,7 @@
 //SECCIÓN DOS
 
 .second__section {
-  background-color: #ffffff;
+  background-color: $color-white;
 }
 
 .contain__product {
@@ -125,7 +125,7 @@
     }
 
     &__description {
-      background-color: rgba(#fff, 0.6);
+      background-color: rgba($color-white, 0.6);
       padding: 0;
       
       &__date {
@@ -162,7 +162,7 @@
       &__continue {
         font-size: 20;
         font-weight: 600;
-        color: orangered;
+        color: $color-orangered;
 
         @include responsive(desktop) {
           font-size: 22px;
@@ -189,7 +189,7 @@
     }
 
     @include responsive(smartPhone) {
-      border: 1px solid #000;
+      border: 1px solid $color-black;
       margin-bottom: 0;
     }
 

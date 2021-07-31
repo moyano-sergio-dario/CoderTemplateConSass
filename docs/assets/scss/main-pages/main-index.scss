@@ -8,7 +8,7 @@
 .main {
   position: relative;
   z-index: 20;
-  box-shadow: 0px 10px 8px #474747;
+  box-shadow: 0px 10px 8px $color-shadow;
 
   &__figure {
     width: 100%;
@@ -29,7 +29,7 @@
     padding: 20px 10px;
     position: absolute;
     top: 0;
-    background: rgba($color-black,  .7);
+    background: rgba($color-black, .7);
 
     &__title {
       font-size: 24px;
