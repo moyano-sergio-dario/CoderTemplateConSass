@@ -128,6 +128,12 @@
       background-color: rgba($color-white, 0.6);
       padding: 0;
       
+      &__gradient {
+        height: 100%;
+        background: rgb(252,252,252);
+        background: linear-gradient(180deg, rgba(252,252,252,1) 5%, rgba(64,64,64,0) 100%);
+      }
+
       &__date {
         font-size: 12px;
         margin: 14px 0;
@@ -181,7 +187,6 @@
         top: 0;
         width: 100%;
         height: 100%;
-        padding-left: 15px;
         justify-content: flex-start;
         transition: all 1s linear;
         transform: translateY(100%);

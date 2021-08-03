@@ -547,6 +547,10 @@
       @include responsive(phone) {
         font-size: 42px;
       }
+
+      @include responsive(tablet) {
+        font-size: 54px;
+      }
     }
 
     &__paragraph {
@@ -555,6 +559,10 @@
 
       @include responsive(phone) {
         font-size: 16px;
+      }
+
+      @include responsive(tablet) {
+        font-size: 22px;
       }
     }
 

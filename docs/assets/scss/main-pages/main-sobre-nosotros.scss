@@ -11,10 +11,18 @@
   z-index: 20;
   box-shadow: 0px 10px 8px $color-shadow;
 
+  &__wrapper {
+    padding: 30px 0 0;
+
+    @include responsive(tablet) {
+      padding: 60px 0 0;
+    }
+
+  }
+
   //TITULO Y SUB-TITULO
 
   &__group {
-    padding: 30px 0 0;
 
     &__title {
       font-size: 20px;

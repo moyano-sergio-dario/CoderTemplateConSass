@@ -15,7 +15,7 @@
 @media screen and (min-width: 992px) {
   .contacto__wrapper {
     max-width: 992px;
-    padding: 60px 15px 160px;
+    padding: 60px 15px 40px;
   }
 }
 .contacto__title {
